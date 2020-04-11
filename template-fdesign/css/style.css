@@ -20,8 +20,8 @@ body {
 }
 .design-wrapper {
   width: 1230px;
-  height: 735px;
   margin: 0 auto;
+  padding-bottom: 206px;
 }
 
 /* HEADER */
@@ -83,12 +83,10 @@ button:focus {
 
 .services-wrapper {
   width: 1230px;
-  height: 866px;
   margin: 0 auto;
 }
 .services {
   background-color: #efefef;
-  height: 866px;
 }
 .services-header {
   display: inline-block;
@@ -162,7 +160,7 @@ button:focus {
 /* SECTION ADVANTEGE */
 .advanteges-wrapper {
   width: 1230px;
-  height: auto;
+
   margin: 0 auto;
 }
 .advanteges-header {
@@ -233,15 +231,13 @@ button:focus {
 /* Footer */
 .footer-wrapper {
   width: 1230px;
-  height: 132px;
+
   margin: 0 auto;
 }
 .page-footer {
   background-color: #efefef;
-  height: 132px;
 }
 .footer-conteiner {
-  height: 132px;
   margin: 0 auto;
   padding: 0;
 }
@@ -266,4 +262,7 @@ button:focus {
 
 p.symbol::before {
   content: "\00A9 ";
+}
+* {
+  outline: 1px solid red;
 }
