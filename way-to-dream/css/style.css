@@ -1,0 +1,194 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.backgound-wrapper {
+  background: linear-gradient(120deg, #4ebefe, #378fd9);
+}
+.logo {
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.title-help {
+  margin: 0;
+  font-family: ubuntu, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 39px;
+  line-height: 49px;
+  padding-top: 80px;
+  padding-bottom: 36px;
+}
+.title-help::after {
+  content: "мечтаю!";
+  color: #ffffff;
+  font-size: 59px;
+  line-height: 73px;
+}
+.go-to-dream-text {
+  max-width: 398px;
+}
+.dream-text {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  line-height: 27px;
+  color: #ffffff;
+}
+.go-to-dream {
+  background-size: 20px;
+  background: url(../img/travel.png) no-repeat top -34px right -60px/924px;
+  padding-bottom: 212px;
+  background-size: 640px;
+}
+.dream-button-top {
+  border: 0px;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: bold;
+  background: #ffd429;
+  padding: 20px 28px;
+}
+
+.prospects-title {
+  margin: 0 auto;
+  text-align: center;
+  font-family: Ubuntu, sans-serif;
+  font-size: 30px;
+  line-height: 25px;
+  font-weight: bold;
+  padding-top: 108px;
+  margin-bottom: 68px;
+}
+.prospects-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  padding-bottom: 120px;
+  margin: 0;
+  justify-content: space-between;
+}
+.list-item-title {
+  margin: 0px;
+  margin-bottom: 16px;
+  font-family: Ubuntu, sans-serif;
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: bold;
+}
+.prospects-list-item {
+  width: 292px;
+  text-align: center;
+}
+.prospects-list-item::before {
+  content: "";
+  display: block;
+  height: 70px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 28px;
+}
+.icon-time::before {
+  background-image: url(../img/icon-time.png);
+}
+.icon-palm::before {
+  background-image: url(../img/icon-palm.png);
+}
+.icon-rocket:before {
+  background-image: url(../img/icon-rocket.png);
+}
+.list-item-text {
+  font-family: ubuntu, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.order-form-wrapper {
+  background: #ecf3f8;
+}
+.order-form-title {
+  margin: 0;
+  text-align: center;
+  font-family: ubuntu, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 25px;
+  margin-bottom: 56px;
+  padding-top: 104px;
+}
+.form {
+  width: 344px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.input {
+  background: #ffffff;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  width: 344px;
+  font-family: ubuntu, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 16px 0px 16px 24px;
+}
+.input:not(:last-child) {
+  margin-bottom: 16px;
+}
+.button-wrapper-bottom {
+  text-align: center;
+  padding-bottom: 106px;
+}
+.dream-button-bottom {
+  border: 0px;
+  width: 344px;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: bold;
+  background: #ffd429;
+  padding: 20px 88px;
+}
+
+.footer {
+  background: #164d7a;
+  display: flex;
+}
+.footer-text {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 60px 0;
+}
+.footer-text:before {
+  content: "\00A9";
+}
