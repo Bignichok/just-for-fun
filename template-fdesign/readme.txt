@@ -1,0 +1,1 @@
+https://bignichok.github.io/just-for-fun/template-fdesign/index.html
