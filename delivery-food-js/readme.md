@@ -1,1 +1,0 @@
-https://bignichok.github.io/just-for-fun/delivery-food-js/index.html
