@@ -33,7 +33,6 @@ const getData = async function (url) {
 
 const valid = function (str) {
   const nameReg = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;
-  return nameReg.test(str);
 };
 
 const toggleModal = function () {
@@ -190,7 +189,7 @@ function openGoods(event) {
       containerPromo.classList.add("hide");
       restaurants.classList.add("hide");
       menu.classList.remove("hide");
-      getData(`../db/${restaurant.dataset.products}`).then(function (data) {
+      getData(`./db/${restaurant.dataset.products}`).then(function (data) {
         data.forEach(createCardGood);
       });
     } else {
@@ -200,7 +199,7 @@ function openGoods(event) {
 }
 
 function init() {
-  getData("../db/partners.json").then(function (data) {
+  getData("./db/partners.json").then(function (data) {
     data.forEach(createCardRestaurant);
   });
 
