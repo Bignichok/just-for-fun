@@ -17,6 +17,10 @@ const restaurants = document.querySelector(".restaurants");
 const menu = document.querySelector(".menu");
 const logo = document.querySelector(".logo");
 const cardsMenu = document.querySelector(".cards-menu");
+const restaurantTitle = document.querySelector(".restaurant-title");
+const rating = document.querySelector(".rating");
+const minPrice = document.querySelector(".price");
+const category = document.querySelector(".category");
 
 let login = localStorage.getItem("Delivery-food");
 
@@ -40,13 +44,13 @@ const toggleModal = function () {
   modalAuth.classList.toggle("is-open");
 };
 
-const toogleModalAuth = function (callback) {
+const toggleModalAuth = function (callback) {
   modalAuth.classList.toggle("is-open");
   loginInput.style.borderColor = "";
 };
 
-buttonAuth.addEventListener("click", toogleModalAuth);
-closeAuth.addEventListener("click", toogleModalAuth);
+buttonAuth.addEventListener("click", toggleModalAuth);
+closeAuth.addEventListener("click", toggleModalAuth);
 
 function authorized() {
   console.log("Авторизован");
@@ -79,9 +83,9 @@ function notAuthorized() {
     if (valid(loginInput.value.trim())) {
       login = loginInput.value;
       localStorage.setItem("Delivery-food", login);
-      toogleModalAuth();
-      buttonAuth.removeEventListener("click", toogleModalAuth);
-      closeAuth.removeEventListener("click", toogleModalAuth);
+      toggleModalAuth();
+      buttonAuth.removeEventListener("click", toggleModalAuth);
+      closeAuth.removeEventListener("click", toggleModalAuth);
       logInForm.removeEventListener("submit", logIn);
       logInForm.reset();
       checkAuth();
@@ -91,8 +95,8 @@ function notAuthorized() {
     }
   }
 
-  buttonAuth.addEventListener("click", toogleModalAuth);
-  closeAuth.addEventListener("click", toogleModalAuth);
+  buttonAuth.addEventListener("click", toggleModalAuth);
+  closeAuth.addEventListener("click", toggleModalAuth);
   logInForm.addEventListener("submit", logIn);
 }
 
@@ -116,10 +120,11 @@ function createCardRestaurant({
   time_of_delivery: timeOfDelivery,
 }) {
   const card = `   
-    <a  class="card card-restaurant" data-products="${products}">
+    <a  class="card card-restaurant" data-products="${products}" 
+    data-info="${[name, price, stars, kitchen]}">
               <img
                 src="${image}"
-                alt="image"
+                alt="${name}"
                 class="card-image"
               />
               <div class="card-text">
@@ -153,7 +158,7 @@ function createCardGood({ description, id, image, name, price }) {
         
               <img
                 src="${image}"
-                alt="image"
+                alt="${name}"
                 class="card-image"
               />
               <div class="card-text">
@@ -180,21 +185,32 @@ function createCardGood({ description, id, image, name, price }) {
   cardsMenu.insertAdjacentElement("beforeend", card);
 }
 
+// opening restaurant menu
 function openGoods(event) {
   const target = event.target;
 
   const restaurant = target.closest(".card-restaurant");
   if (restaurant) {
+    const info = restaurant.dataset.info.split(",");
+
+    const [name, price, stars, kitchen] = info;
+
     if (login) {
       cardsMenu.textContent = "";
       containerPromo.classList.add("hide");
       restaurants.classList.add("hide");
       menu.classList.remove("hide");
+
+      restaurantTitle.textContent = name;
+      rating.textContent = stars;
+      minPrice.textContent = `от ${price} ₽ `;
+      category.textContent = kitchen;
+
       getData(`./db/${restaurant.dataset.products}`).then(function (data) {
         data.forEach(createCardGood);
       });
     } else {
-      toogleModalAuth();
+      toggleModalAuth();
     }
   }
 }
