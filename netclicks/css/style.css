@@ -959,6 +959,14 @@ main {
   animation-name: tap-upper-4;
 }
 
+#headTrailer {
+  margin-bottom: 16px;
+}
+
+.trailerName {
+  margin: 10px 0 10px 0;
+}
+
 @-webkit-keyframes tap-upper-1 {
   0%,
   50%,
