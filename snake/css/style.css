@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+}
+
+.title {
+  color: gold;
+  text-align: center;
+}
+
+.canvas-wrp {
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.start {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  background-color: transparent;
+  color: gold;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
