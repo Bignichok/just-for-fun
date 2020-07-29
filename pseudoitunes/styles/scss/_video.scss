@@ -14,7 +14,7 @@
 
   &-container {
     position: relative;
-    border: 1px solid rgba(#0F1E36, .2);
+    border: 1px solid rgba(#0f1e36, 0.2);
     border-bottom: none;
     max-width: 800px;
     margin: 0 auto;
@@ -31,24 +31,21 @@
 
     @media (max-width: 650px) {
       height: 168px;
-
     }
   }
 
   &-navigation {
     position: absolute;
     bottom: -44px;
-    border-left: 1px solid rgba(#0F1E36, .2);
-    border-right: 1px solid rgba(#0F1E36, .2);
+    border-left: 1px solid rgba(#0f1e36, 0.2);
+    border-right: 1px solid rgba(#0f1e36, 0.2);
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0F1E36;
+    background-color: #0f1e36;
     color: #fff;
-
-
   }
 
   &-button {
@@ -56,7 +53,8 @@
     background-color: transparent;
     border: 0;
     outline: 0;
-    margin: 15px;
+    margin: 12px;
+    width: 24px;
   }
 
   &-time {
