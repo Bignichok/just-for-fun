@@ -661,4 +661,10 @@ input[type="range"]:focus::-ms-fill-upper {
 .video-volume {
   max-width: 80px;
 }
+.radio-volume {
+  max-width: 100px;
+}
+.volume {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.min.css.map */
